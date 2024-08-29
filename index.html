@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Expresión para que sea responsivo en celulares-->
-    <title>Página Hecha Con Bootstrap</title>
+    <title>tarea</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!--Estilos CSS de Bootstrap-->
     <style>
@@ -16,7 +16,7 @@
             color: black;
             text-align: center;
         }
-        .header h1 { /* EStilo de letra de encabezado */
+        .header h1 { /* Estilo de letra de encabezado */
             font-size: 50px;
             font-weight: bold;
         }
@@ -36,8 +36,8 @@
                 <div class="card">
                 <img src="https://picsum.photos/200" height="300px" class="card-img-top" > <!-- Imagen de la tarjeta -->
                     <div class="card-body">
-                        <h5 class="card-title">Calendarizacion de procesos Round Robin</h5>
-                        <p class="card-text" id="cardBody">
+                        <h5 class="card-title">Calendarizacion de procesos Round Robin</h5> <!-- Título de la tarjeta -->
+                        <p class="card-text" id="cardBody"> <!-- Cuerpo de la tarjeta -->
                         </p>
                     </div>
                 </div>
@@ -45,9 +45,9 @@
         </div>
     </div>
 
-    <!-- Botón -->
+    <!-- Botón que carga el archivo javascript -->
     <div class="container text-center my-5">
-        <a class="btn btn-primary" onclick="cargarScriptDinamicamente()">Iniciar</a>
+        <a class="btn btn-primary" id="botonDeCambio" onclick="cargarScript()">Iniciar</a>
     </div>
 
     <!-- Pie de página -->
@@ -59,10 +59,18 @@
 
 </body>
 <script>
-    function cargarScriptDinamicamente() {
+    /*
+    Función que ejecuta el archivo javascript principal y cambia
+    las funcionalidades del botón para recargar la página.
+    */
+    function cargarScript() {
     var script = document.createElement('script');
-    script.src = 'Meta1-3.js'; // Asegúrate de que la ruta es correcta
+    script.src = 'Meta1-3.js';
     document.body.appendChild(script);
+    document.getElementById("botonDeCambio").innerHTML = "Reiniciar";
+    document.getElementById("botonDeCambio").onclick = function() {
+        window.location.reload();
+    };
 }
 </script>
 </html>
