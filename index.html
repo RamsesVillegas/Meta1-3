@@ -1,0 +1,97 @@
+<!-- Ramses Villegas Página-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Expresión para que sea responsivo en celulares-->
+    <title>Página Hecha Con Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!--Estilos CSS de Bootstrap-->
+    <style>
+        .header { /* Encabezado de página con imagen */
+            background-image: url('https://img.freepik.com/vector-gratis/fondo-banner-onda-colorida-que-fluye-moderno_1035-19861.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px;
+            color: black;
+            text-align: center;
+        }
+        .header h1 { /* EStilo de letra de encabezado */
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <h1>Bienvenido a Mi Sitio Web</h1>
+    </header>
+
+    <!-- Sección de Tarjetas -->
+    <div class="container my-5"> <!-- Contenedor para dos tarjetas -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="https://picsum.photos/200" height="300px" class="card-img-top" > <!-- Imagen de la tarjeta -->
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la Tarjeta 1</h5>
+                        <p class="card-text">Este es un texto descriptivo para la tarjeta 1. Puedes agregar cualquier
+                            contenido que desees aqui
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="https://picsum.photos/199" height="300px" class="card-img-top" > <!-- Imagen de la tarjeta -->
+                    <div class="card-body">
+                        <h5 class="card-title">Título de la Tarjeta 2</h5>
+                        <p class="card-text">Este es un texto descriptivo para la tarjeta 2. Puedes agregar cualquier
+                            contenido que desees aqui</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Tabla -->
+    <div class="container my-5">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Columna 1</th>
+                    <th>Columna 2</th>
+                    <th>Columna 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Valor 1</td>
+                    <td>Valor 2</td>
+                    <td>Valor 3</td>
+                </tr>
+                <tr>
+                    <td>Valor 4</td>
+                    <td>Valor 5</td>
+                    <td>Valor 6</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Botón -->
+    <div class="container text-center my-5">
+        <a href="https://www.google.com/" class="btn btn-primary">Enviar</a>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
