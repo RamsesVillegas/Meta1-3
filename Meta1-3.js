@@ -1,5 +1,3 @@
-const prompt = require('prompt-sync')(); //Se importa el módulo para leer input de usuario.
-
 /*
 Lista con las lineas de codigos predefindas
 */
@@ -30,8 +28,8 @@ en la lista de procesos, la cantidad de lineas de codigo varia siempre entre
 1 y 3
 */
 function elegirLineas(procesoIndividual){ 
-    for(let i = 0; i < getRandomInt(4,1); i++){
-        procesoIndividual.lineas.push(lineasDeCodigo[getRandomInt(8,0)]);
+    for(let i = 0; i < obtenerNumeroAleatorio(4,1); i++){
+        procesoIndividual.lineas.push(lineasDeCodigo[obtenerNumeroAleatorio(8,0)]);
     }
 }
 
@@ -79,11 +77,11 @@ mas lineas de codigo en un proceso, ese define el proceso como terminado.
 function iniciarSimulacion(listaDeProcesos){
     for(let i = 0; i < cantidadMaximaDeLineaDeCodigo(listaDeProcesos); i++){
         for(let j = 0; j < Object.keys(listaDeProcesos).length; j++){
-            console.log("Proceso " + listaDeProcesos[j].numeroDeProceso);
+            document.getElementById("cardBody").innerText += "Proceso " + listaDeProcesos[j].numeroDeProceso + "\n";
             if(listaDeProcesos[j].lineas[i] === undefined){
-                console.log("Proceso terminado");
+               document.getElementById("cardBody").innerText += "Proceso terminado\n";
             } else {
-                console.log("Linea de codigo: " + listaDeProcesos[j].lineas[i]);
+               document.getElementById("cardBody").innerText += "Linea de codigo: " + listaDeProcesos[j].lineas[i] + "\n";
             }
         }
     }
@@ -98,5 +96,5 @@ Inicio del programa
 if(numeroDeProcesos > 0){
     iniciarSimulacion(inicializarSimulacion(numeroDeProcesos));
 } else {
-    console.log("Ingresa un numero valido");
+    document.getElementById("cardBody").innerText = "Ingresa un numero valido";
 }
