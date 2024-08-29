@@ -1,5 +1,5 @@
 /*
-Lista con las lineas de codigos predefindas
+Lista con las líneas de códigos predefinidas
 */
 const lineasDeCodigo = [
     'a = 1 + 2;',
@@ -14,7 +14,7 @@ const lineasDeCodigo = [
 
 /*
 Función que regresa un número entero aleatorio entre un
-rango minimo y maximo
+rango mínimo y máximo
 */
 function obtenerNumeroAleatorio(max, min) { 
     const minimoTotal = Math.ceil(min);
@@ -23,8 +23,8 @@ function obtenerNumeroAleatorio(max, min) {
 }
 
 /*
-Funcion que agrega lineas de codigo a los procesos contenidos
-en la lista de procesos, la cantidad de lineas de codigo varia siempre entre
+Función que agrega líneas de código a los procesos contenidos
+en la lista de procesos, la cantidad de líneas de código varía siempre entre
 1 y 3
 */
 function elegirLineas(procesoIndividual){ 
@@ -34,9 +34,9 @@ function elegirLineas(procesoIndividual){
 }
 
 /*
-Funcion que regresa la cantidad maxima de lineas de codigo 
-contenidas en los procesos, esto con el fin de saber el numero
-de veces que se ejecutaran todos los procesos y si estos han
+Función que regresa la cantidad máxima de líneas de código 
+contenidas en los procesos, esto con el fin de saber el número
+de veces que se ejecutarán todos los procesos y si estos han
 terminado de ejecutarse.
 */
 const cantidadMaximaDeLineaDeCodigo = function(listaDeProcesos){
@@ -50,9 +50,9 @@ const cantidadMaximaDeLineaDeCodigo = function(listaDeProcesos){
 }
 
 /*
-Funcion que inicializa la lista de procesos y los atributos de
-los procesos, estos atributos son el numero de proceso
-y las lineas de codigo, este ultimo se inicializa vacio para poder
+Función que inicializa la lista de procesos y los atributos de
+los procesos, estos atributos son el número de proceso
+y las líneas de código, este último se inicializa vacío para poder
 agregarse aleatoriamente por proceso.
 */
 function inicializarSimulacion(numeroDeProcesos){
@@ -69,10 +69,10 @@ function inicializarSimulacion(numeroDeProcesos){
 }
 
 /*
-Funcion que inicia la simulacion del algoritmo de calendarizacion
+Función que inicia la simulación del algoritmo de calendarización
 de procesos Round Robin simplificado. Este imprime cada uno de los procesos
-junto con las lineas de codigo de forma secuencial. En caso de no encontrar 
-mas lineas de codigo en un proceso, ese define el proceso como terminado.
+junto con las líneas de código de forma secuencial. En caso de no encontrar 
+mas líneas de código en un proceso, este define el proceso como terminado.
 */
 function iniciarSimulacion(listaDeProcesos){
     for(let i = 0; i < cantidadMaximaDeLineaDeCodigo(listaDeProcesos); i++){
